@@ -1,4 +1,3 @@
-# code here!
 class School
 
   attr_accessor :name, :roster
@@ -9,10 +8,11 @@ class School
   end
 
   def add_student(name, grade)
-    roster[grade] = []
-    if roster[grade] = []
-      roster[grade] << name
-    end 
+    if roster[grade] == nil
+    roster[grade] = [name]
+    else
+    roster[grade] << name
+    end
   end
 
 end
